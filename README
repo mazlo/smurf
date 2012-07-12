@@ -1,0 +1,13 @@
+Schema Matching by Utilizing Regular Expressions and Feature Extraction.
+
+This is a tool for instance-based schema matching.
+
+You can invoke the tool at the command-line by typing:
+
+java -jar org.gesis.smurf.jar <path_to_source_ontology> <path_to_target_ontology> <path_to_pattern_file>
+
+Regular Expressions in the pattern file must follow the following conventions:
+
+<pattern><tab><weighting>, e.g. "[0-9]{3}	0.4" (without the "). 
+
+Each line denotes one pattern. All of the patterns contained in the file are considered as a pattern class, which match a certain data type, e.g. a date. The higher the weighting (between 0 and 1, e.g. 0.8) the higher the confidence that this pattern truely matches a date value.
