@@ -74,12 +74,6 @@ public class MatchingAlgorithm {
 					// string
 					value = object.asResource().toString().substring( object.asResource().toString().lastIndexOf( "/" ) + 1 );
 
-				int index;
-				if ( ( index = StringUtils.indexOf( value, "#" ) ) > 0 )
-					// hack due to object value. it is, e.g. 'age2#5-9',
-					// but we rather want '5-9'
-					value = value.substring( index + 1 );
-
 			} else if ( object instanceof LiteralImpl ) {
 				value = object.toString();
 
